@@ -1,0 +1,32 @@
+{
+  "name": "z-algorithm",
+  "version": "1.0.0",
+  "description": "This algorithm finds all occurrences of a pattern in a text in linear time. Let length of text be n and of pattern be m, then total time taken is O(m + n) with linear space complexity.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karimation/z-algorithm.git"
+  },
+  "author": "“kerim <“selmi.kerim@gmail.com\nnpm set init.author.email “selmi.kerim@gmail.com> (“http://www.karimation.com\nnpm set init.author.url “http://www.karimation.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/karimation/z-algorithm/issues"
+  },
+  "homepage": "https://github.com/karimation/z-algorithm#readme",
+  "keywords": [
+    "z-algorithm",
+    "pattern-searching-algorithm",
+    "filter-search-box",
+    "string",
+    "string-matching",
+    "string-compare",
+    "javascript",
+    "rn-strings-filter",
+    "rn-string-matching",
+    "rn-strig-compare",
+    "react-native"
+  ]
+}
