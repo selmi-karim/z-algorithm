@@ -2,7 +2,7 @@
  * @Author: kerim selmi 
  * @Date: 2018-06-12 12:05:03 
  * @Last Modified by: kerim selmi
- * @Last Modified time: 2018-06-12 12:07:23
+ * @Last Modified time: 2018-06-12 16:25:44
  */
 
 /**
@@ -11,53 +11,45 @@
 
 
 //Fills Z array for given string str[]
-let getZarr = (str, Z) => {
+const getZarr = (str, Z) => {
 
-    let n = str.length;
+    const n = str.length;
 
     // [L,R] make a window which matches with 
     // prefix of s
-    let L = 0, R = 0;
-
+    let L = 0, R = 0
     for (let i = 1; i < n; ++i) {
-
         // if i>R nothing matches so we will calculate.
         // Z[i] using naive way.
         if (i > R) {
-
-            L = R = i;
-
+            L = R = i
             // R-L = 0 in starting, so it will start
             // checking from 0'th index
-
             while (R < n && str.charAt(R - L) == str.charAt(R))
-                R++;
-
-            Z[i] = R - L;
-            R--;
+                R++
+            Z[i] = R - L
+            R--
 
         }
         else {
 
             // k = i-L so k corresponds to number which
             // matches in [L,R] interval.
-            let k = i - L;
+            const k = i - L
 
             // if Z[k] is less than remaining interval
             // then Z[i] will be equal to Z[k].
             if (Z[k] < R - i + 1)
-                Z[i] = Z[k];
+                Z[i] = Z[k]
 
             else {
-
-
                 // else start from R and check manually
-                L = i;
+                L = i
                 while (R < n && str.charAt(R - L) == str.charAt(R))
-                    R++;
+                    R++
 
-                Z[i] = R - L;
-                R--;
+                Z[i] = R - L
+                R--
             }
         }
     }
@@ -67,9 +59,9 @@ let getZarr = (str, Z) => {
 const search = (text, pattern) => {
 
     // Create concatenated string "P$T"
-    let concat = pattern + "$" + text;
+    const concat = pattern + "$" + text
 
-    let l = concat.length;
+    const l = concat.length
 
     let Z = []
     let result = []
