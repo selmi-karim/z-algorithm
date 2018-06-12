@@ -4,7 +4,8 @@
   "description": "This algorithm finds all occurrences of a pattern in a text in linear time. Let length of text be n and of pattern be m, then total time taken is O(m + n) with linear space complexity.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -28,5 +29,8 @@
     "rn-string-matching",
     "rn-strig-compare",
     "react-native"
-  ]
+  ],
+  "devDependencies": {
+    "jest": "^23.1.0"
+  }
 }
