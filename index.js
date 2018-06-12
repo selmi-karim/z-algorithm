@@ -2,7 +2,7 @@
  * @Author: kerim selmi 
  * @Date: 2018-06-12 12:05:03 
  * @Last Modified by: kerim selmi
- * @Last Modified time: 2018-06-12 16:25:44
+ * @Last Modified time: 2018-06-12 16:36:28
  */
 
 /**
@@ -60,9 +60,7 @@ const search = (text, pattern) => {
 
     // Create concatenated string "P$T"
     const concat = pattern + "$" + text
-
     const l = concat.length
-
     let Z = []
     let result = []
 
@@ -77,10 +75,11 @@ const search = (text, pattern) => {
         //console.log(Z[i]+" "+pattern.length)
         if (Z[i] == pattern.length) {
             result.push((i - pattern.length - 1))
-            console.log("Pattern found at index "
-                + (i - pattern.length - 1));
+            
         }
     }
     return result
 }
-console.log(search('aaafqf', 'a'))
+//console.log(search('aaafqf', 'a'))
+
+exports.search = search;
